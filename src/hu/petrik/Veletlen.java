@@ -37,4 +37,29 @@ public final class Veletlen {
     public static char velKarakter(char max, char min){
         return (char)velEgesz(min, max);
     }
+
+    public static String velVezeteknev(){
+        return VezNevek.get(random.nextInt(VezNevek.size()));
+        //return VezNevek.get(velEgesz(0, VezNevek.size()-1));
+    }
+
+    public static String velKeresztnev(boolean nem){
+        String keresztNev = "";
+        if (nem){
+            keresztNev = ferfiKerNevek.get(random.nextInt(ferfiKerNevek.size()));
+        }
+        else{
+            keresztNev = noiKerNevek.get(random.nextInt(noiKerNevek.size()));
+        }
+        return keresztNev;
+    }
+
+    public static String velKeresztnev(){
+        return velKeresztnev(random.nextBoolean());
+    }
+
+
+    public static String velTeljesnev(boolean nem){
+        return String.format("%s %s", velVezeteknev(), velKeresztnev(nem));
+    }
 }
