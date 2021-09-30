@@ -31,6 +31,6 @@ public final class Veletlen {
     }
 
     private static int velEgesz(int max, int min){
-        return random.nextInt(10)+1;
+        return random.nextInt(max-min+1)+min;
     }
 }
