@@ -30,7 +30,7 @@ public final class Veletlen {
         return fajlSorai;
     }
 
-    public static int velEgesz(int max, int min){
+    public static int velEgesz(int min, int max){
         return random.nextInt(max-min+1)+min;
     }
 
@@ -61,5 +61,9 @@ public final class Veletlen {
 
     public static String velTeljesnev(boolean nem){
         return String.format("%s %s", velVezeteknev(), velKeresztnev(nem));
+    }
+
+    public static String velTeljesnev(){
+        return velTeljesnev(random.nextBoolean());
     }
 }
