@@ -30,11 +30,11 @@ public final class Veletlen {
         return fajlSorai;
     }
 
-    private static int velEgesz(int max, int min){
+    public static int velEgesz(int max, int min){
         return random.nextInt(max-min+1)+min;
     }
 
-    private static char velKarakter(char max, char min){
+    public static char velKarakter(char max, char min){
         return (char)velEgesz(min, max);
     }
 }
