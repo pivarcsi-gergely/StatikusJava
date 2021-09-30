@@ -10,11 +10,11 @@ import java.util.Random;
 public final class Veletlen {
 
     private static Random random = new Random();
-    private static List<String> egyesuletek = feltolt("egyesulet.txt");
-    private static List<String> esemenyTipusok = feltolt("esemenytipus.txt");
+    //private static List<String> egyesuletek = feltolt("egyesulet.txt");
+    //private static List<String> esemenyTipusok = feltolt("esemenytipus.txt");
     private static List<String> ferfiKerNevek = feltolt("ferfikernev.txt");
     private static List<String> noiKerNevek = feltolt("noikernev.txt");
-    private static List<String> sportagok = feltolt("sportag.txt");
+    //private static List<String> sportagok = feltolt("sportag.txt");
     private static List<String> VezNevek = feltolt("veznev.txt");
 
     private Veletlen(){}
@@ -32,5 +32,9 @@ public final class Veletlen {
 
     private static int velEgesz(int max, int min){
         return random.nextInt(max-min+1)+min;
+    }
+
+    private static char velKarakter(char max, char min){
+        return (char)velEgesz(min, max);
     }
 }
